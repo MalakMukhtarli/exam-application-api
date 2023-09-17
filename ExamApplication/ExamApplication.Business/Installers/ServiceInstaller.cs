@@ -1,5 +1,6 @@
 ﻿using ExamApplication.Business.Services.Grades;
 using ExamApplication.Business.Services.Lessons;
+using ExamApplication.Business.Services.Pupils;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,6 +12,6 @@ public class ServiceInstaller : IInstaller
     {
         services.AddScoped<IGradeService, GradeManager>();
         services.AddScoped<ILessonService, LessonManager>();
-        
+        services.AddScoped<IPupilService, PupilManager>();
     }
 }
